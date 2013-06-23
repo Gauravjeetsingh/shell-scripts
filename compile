@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Enter the name of file without extension:"
+read filename;
+
+g++ -E $filename".cpp" > macrocode
+
+g++ -S $filename".cpp"  
+
+g++ -c $filename".s"
+
+g++ -o output $filename".o"
+
