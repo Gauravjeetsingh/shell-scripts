@@ -1,0 +1,33 @@
+#Used to give path of shell to be used while executing script
+
+#!/bin/bash
+
+# if the number of command line arguments is 0 then the following code is executed
+# $# is equal to total number of command line arguments given while executing script
+
+if [ $# -eq 0 ] 
+then
+echo "ERROR: Sytax error"
+echo "Syntax:  $0 [number]"
+echo "Used to show multiple table of the number given"
+
+# exit 1 is used to close the current execution
+
+exit 1
+fi
+
+# fi is used to end the if condition block
+
+# $1 contains the value of first command line argument
+n=$1 
+i=1
+
+# while value of i is less than 10 it shows it's table
+while [ $i -le 10 ]
+do
+#  displays value of n X value of i = multiplied result of n and i
+echo "$n X $i = `expr $n \* $i`"
+
+#increment value of i
+i=`expr $i + 1`
+done
