@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "How many lines "
+
+# read is used to take input from the user.
+# here n is the variable in which value is stored
+read n
+
+# this loop executes until the value of i is less than or equal to n
+for ((i=1; $i<=$n; i++))
+do
+
+# Another for loop inside the previous for loop
+# this loop executes until the value of j is less than or equal to i
+
+   for ((j=1; $j<=$i; j++))
+   do
+
+# echo -n here -n is used to print different things on same line
+      echo -n "$j"
+   done
+# this echo is used to go to the next line in standard output.
+   echo " "
+done

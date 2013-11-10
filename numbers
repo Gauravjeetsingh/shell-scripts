@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Enter any number"
+read n
+
+if [ $n -le 0 ]
+then
+echo "Negative number"
+
+else
+echo "Postive number"
+fi
